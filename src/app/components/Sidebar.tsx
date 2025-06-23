@@ -3,6 +3,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
+import HomeIcon from "@mui/icons-material/Home";
+import LoginIcon from "@mui/icons-material/Login";
+import Person4Icon from '@mui/icons-material/Person4';
+import NightShelterIcon from '@mui/icons-material/NightShelter';
 
 const Sidebar: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -25,15 +29,15 @@ const Sidebar: React.FC = () => {
 
   return (
     <aside
-      className={`h-full bg-gray-900 text-white flex flex-col py-6 px-2 space-y-4 transition-all duration-300 ${
-        collapsed ? "w-16" : "w-56"
-      }`}
+      className={`h-full bg-gray-900 text-white flex flex-col py-6 px-2 space-y-4 transition-all duration-300 ${collapsed ? "w-16" : "w-56"
+        }`}
     >
       <div className="flex justify-end mb-4">
         <IconButton
           onClick={() => setCollapsed((c) => !c)}
           size="large"
           className="text-white bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg hover:from-purple-600 hover:to-blue-500 transition-all duration-300 rounded-full p-1"
+          style={{ width: "50px", height: "50px", marginTop: "-16px" }}
         >
           <CustomMenuIcon />
         </IconButton>
@@ -41,16 +45,33 @@ const Sidebar: React.FC = () => {
       <nav className="flex flex-col space-y-2">
         <Link
           to="/"
-          className="hover:bg-gray-700 rounded px-3 py-2 flex items-center justify-start"
+          className="hover:bg-gray-700 rounded px-3 py-2 flex items-center justify-start gap-3"
         >
+          <HomeIcon fontSize="medium" />
           <span className={collapsed ? "hidden" : "block"}>Home</span>
         </Link>
         <Link
           to="/login"
-          className="hover:bg-gray-700 rounded px-3 py-2 flex items-center justify-start"
+          className="hover:bg-gray-700 rounded px-3 py-2 flex items-center justify-start gap-3"
         >
+          <LoginIcon fontSize="medium" />
           <span className={collapsed ? "hidden" : "block"}>Login</span>
         </Link>
+
+        <Link 
+        to="/rooms"
+        className="hover:bg-gray-700 rounded px-3 py-2 flex items-center justify-start gap-3">
+          <NightShelterIcon fontSize="medium" />
+          <span className={collapsed ? "hidden" : "block"}>Rooms</span>
+        </Link>
+
+        <Link 
+        to="/customers"
+        className="hover:bg-gray-700 rounded px-3 py-2 flex items-center justify-start gap-3">
+          <Person4Icon fontSize="medium" />
+          <span className={collapsed ? "hidden" : "block"}>Customers</span>
+        </Link>
+
       </nav>
     </aside>
   );

@@ -8,7 +8,7 @@ import LoginIcon from "@mui/icons-material/Login";
 const Topbar: React.FC = () => {
   const navigate = useNavigate();
   return (
-    <header className="w-full h-16 bg-gray-800 text-white flex items-center px-6 py-2 shadow justify-between">
+    <header className="w-full h-16 bg-gray-800 text-white flex items-center px-6 py-4 shadow justify-between">
       <h1 className="text-xl font-bold">My App</h1>
       <Button
         variant="outline"
