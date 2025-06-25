@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import LoginIcon from "@mui/icons-material/Login";
 
 const Login: React.FC = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100">
+  <div className="flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100" style={{ height: "100%" }}>
     <div className="bg-white p-10 rounded-2xl shadow-lg w-full max-w-md flex flex-col items-center mx-4">
       <div className="flex items-center gap-2 mb-6">
         <LoginIcon fontSize="large" className="text-blue-600" />
@@ -31,7 +31,7 @@ const Login: React.FC = () => (
       </form>
       <div className="mt-6 text-gray-500 text-sm">
         <span>Don't have an account?</span>
-        <a href="#" className="ml-2 text-blue-600 hover:underline font-medium">Sign up</a>
+        <a href="/signup" className="ml-2 text-blue-600 hover:underline font-medium">Sign up</a>
       </div>
     </div>
   </div>

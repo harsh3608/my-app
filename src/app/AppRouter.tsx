@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import RoomList from "./components/Room/RoomList";
 import CustomerList from "./components/Customer/CustomerList";
+import Register from "./components/Register";
 
 const AppRouter: React.FC = () => (
   <Router>
@@ -19,6 +20,7 @@ const AppRouter: React.FC = () => (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Register />} />
             <Route path="/rooms" element={<RoomList/>} />
             <Route path="/customers" element={<CustomerList/>} />
           </Routes>
