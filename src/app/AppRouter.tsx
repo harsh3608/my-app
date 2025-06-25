@@ -6,6 +6,8 @@ import Topbar from "./components/Topbar";
 import Sidebar from "./components/Sidebar";
 import Home from "./components/Home";
 import Login from "./components/Login";
+import RoomList from "./components/Room/RoomList";
+import CustomerList from "./components/Customer/CustomerList";
 
 const AppRouter: React.FC = () => (
   <Router>
@@ -17,6 +19,8 @@ const AppRouter: React.FC = () => (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/rooms" element={<RoomList/>} />
+            <Route path="/customers" element={<CustomerList/>} />
           </Routes>
         </main>
       </div>

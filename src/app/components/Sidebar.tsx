@@ -50,13 +50,13 @@ const Sidebar: React.FC = () => {
           <HomeIcon fontSize="medium" />
           <span className={collapsed ? "hidden" : "block"}>Home</span>
         </Link>
-        <Link
+        {/* <Link
           to="/login"
           className="hover:bg-gray-700 rounded px-3 py-2 flex items-center justify-start gap-3"
         >
           <LoginIcon fontSize="medium" />
           <span className={collapsed ? "hidden" : "block"}>Login</span>
-        </Link>
+        </Link> */}
 
         <Link 
         to="/rooms"
